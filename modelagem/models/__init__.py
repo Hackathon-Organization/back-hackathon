@@ -5,3 +5,4 @@ from .participantes import Participantes
 from .equipes import Equipes
 from .tecnologia import Tecnologias
 from .projetos import Projetos
+from .patrocinador import Patrocinador

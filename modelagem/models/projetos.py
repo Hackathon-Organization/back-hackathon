@@ -12,3 +12,5 @@ class Projetos(models.Model):
     pontuacao = models.DecimalField(max_digits=10, decimal_places=2, verbose_name = "pontuação")
     tecnologia = models.ForeignKey(Tecnologias, related_name="Projetos", on_delete=models.CASCADE, null=True, default=None)
     
+    def __str__(self):
+        return f"({self.nome}) - {self.pontuacao}"
