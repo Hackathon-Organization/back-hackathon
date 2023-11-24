@@ -25,6 +25,7 @@ from modelagem.views import(
     ParticipantesViewSet,
     ProjetosViewSet,
     TecnologiasViewSet,
+    PatrocinadorViewSet
 )
 
 router = DefaultRouter()
@@ -37,6 +38,7 @@ router.register(r"hackathon", HackathonViewSet)
 router.register(r"participantes", ParticipantesViewSet)
 router.register(r"projetos", ProjetosViewSet)
 router.register(r"tecnologias", TecnologiasViewSet)
+router.register(r"patrocinador", PatrocinadorViewSet)
 
 urlpatterns = [
     path("api/", include(router.urls)),

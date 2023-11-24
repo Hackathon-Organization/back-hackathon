@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Hackathon, Participantes, Equipes, Projetos, Tecnologias, Empresa, Avaliador
+from .models import Hackathon, Participantes, Equipes, Projetos, Tecnologias, Empresa, Avaliador,Patrocinador
 
 admin.site.register(Avaliador)
 admin.site.register(Empresa)
@@ -9,3 +9,4 @@ admin.site.register(Participantes)
 admin.site.register(Equipes)
 admin.site.register(Tecnologias)
 admin.site.register(Projetos)
+admin.site.register(Patrocinador)
