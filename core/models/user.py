@@ -34,10 +34,14 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    """User model in the system."""
+    class TipoUsuario(models.IntegerChoices):
+        JURADOS = 1
+        PARTICIPANTES = 2
+        PATROCINADOR = 3
 
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
+    user = models.IntegerField(choices=TipoUsuario.choices, default=TipoUsuario.PARTICIPANTES, verbose_name="Tipo de Usuário")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
