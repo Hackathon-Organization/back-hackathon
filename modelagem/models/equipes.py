@@ -8,6 +8,6 @@ class Equipes(models.Model):
         verbose_name_plural = "Equipes"
         
     nome = models.CharField(max_length=50)
-    membro = models.ForeignKey(Participantes, related_name="equipes", on_delete=models.CASCADE)
+    membro = models.ManyToManyField(Participantes)
     projeto = models.ForeignKey(Projetos, related_name="equipes", on_delete=models.CASCADE)
     

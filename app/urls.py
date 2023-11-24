@@ -11,20 +11,25 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from core.views import UserViewSet
 from modelagem.views import(
+    AvaliadorViewSet,
+    EmpresasViewSet,
     EquipesViewSet, 
     HackathonViewSet,
     ParticipantesViewSet,
     ProjetosViewSet,
+    TecnologiasViewSet,
 )
 
 router = DefaultRouter()
 
 router.register("users", UserViewSet, basename="users")
-
+router.register(r"avaliadores", AvaliadorViewSet)
+router.register(r"empresas", EmpresasViewSet)
 router.register(r"equipes", EquipesViewSet)
 router.register(r"hackathon", HackathonViewSet)
 router.register(r"participantes", ParticipantesViewSet)
 router.register(r"projetos", ProjetosViewSet)
+router.register(r"tecnologias", TecnologiasViewSet)
 
 urlpatterns = [
     # API
