@@ -2,7 +2,7 @@
 name = ""
 version = ""
 description = ""
-authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
+authors = [{ name = "Juan Petersson Borges Padilha", email = "juanpeterssonb@gmail.com" }]
 dependencies = [
     "django>=4.1.4",
     "djangorestframework>=3.14.0",
