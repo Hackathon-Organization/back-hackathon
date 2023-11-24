@@ -7,7 +7,7 @@ class Participantes(models.Model):
         
     email = models.EmailField(max_length=255, unique=True)
     nome = models.CharField(max_length=255)
-    equipe_atual = models.CharField(max_length=50)
+    equipe_atual = models.CharField(max_length=50, null=True, default=None)
     pontuacao = models.DecimalField(max_digits=10, decimal_places=1, verbose_name = "pontuação", default=0)
     
     def __str__(self):
