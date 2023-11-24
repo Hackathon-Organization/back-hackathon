@@ -5,5 +5,5 @@ from modelagem.serializers import PatrocinadorSerializers
 
 
 class PatrocinadorViewSet(ModelViewSet):
-    queryset = Patrocinador.objects.all()
+    queryset = Patrocinador.objects.all().order_by('logo')
     serializer_class = PatrocinadorSerializers

@@ -6,6 +6,11 @@ from uploader.serializers import ImageSerializer
 from modelagem.models import Patrocinador
 
 class PatrocinadorSerializers(ModelSerializer):
+    class Meta:
+        model = Patrocinador
+        fields = "__all__"
+        ordering = ['logo']
+
     logo_attachment_key = SlugRelatedField(
         source="logo",
         queryset=Image.objects.all(),

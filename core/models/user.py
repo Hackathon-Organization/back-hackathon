@@ -1,6 +1,5 @@
-"""
-Database models.
-"""
+from uploader.models import Image
+
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -44,6 +43,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     user = models.IntegerField(choices=TipoUsuario.choices, default=TipoUsuario.PARTICIPANTES, verbose_name="Tipo de Usuário")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+
+    capa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+    )
 
     objects = UserManager()
 
