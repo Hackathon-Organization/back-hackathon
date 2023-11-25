@@ -32,13 +32,13 @@ router = DefaultRouter()
 
 router.register("users", UserViewSet, basename="users")
 router.register(r"avaliadores", AvaliadorViewSet)
-router.register(r"empresas", EmpresasViewSet)
+#router.register(r"empresas", EmpresasViewSet)
 router.register(r"equipes", EquipesViewSet)
 router.register(r"hackathon", HackathonViewSet)
 router.register(r"participantes", ParticipantesViewSet)
 router.register(r"projetos", ProjetosViewSet)
-router.register(r"tecnologias", TecnologiasViewSet)
-router.register(r"patrocinador", PatrocinadorViewSet)
+#router.register(r"tecnologias", TecnologiasViewSet)
+#router.register(r"patrocinador", PatrocinadorViewSet)
 
 
 urlpatterns = [
