@@ -7,3 +7,6 @@ class Avaliador(models.Model):
 
     nome = models.CharField(max_length=50)
     area_de_especializacao = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.nome

@@ -7,3 +7,6 @@ class Tecnologias(models.Model):
 
     nome = models.CharField(max_length=50)
     descrição = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.nome

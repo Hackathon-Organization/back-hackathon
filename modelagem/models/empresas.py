@@ -11,3 +11,6 @@ class Empresa(models.Model):
     contato = models.EmailField()
     funcao = models.CharField(max_length=50)
     avaliador = models.ForeignKey(Avaliador, related_name="Empresa", on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.nome

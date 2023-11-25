@@ -12,3 +12,6 @@ class Patrocinador(models.Model):
         blank=True,
     )
     investimento = models.DecimalField(max_digits=1000, decimal_places=5)
+    
+    def __str__(self):
+        return self.nome
